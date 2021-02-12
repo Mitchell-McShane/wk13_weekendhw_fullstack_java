@@ -1,6 +1,7 @@
 import CourseDisplay from "../components/Course/CourseDisplay"
 import BookingDisplay from "../components/Bookings/BookingDisplay"
 import CustomerDisplay from "../components/Customers/CustomerDisplay"
+import "./AppContainer.css"
 
 
 const AppContainer = ({bookings, courses, customers}) => {

@@ -6,7 +6,7 @@ const BookingDisplay = ({bookings}) => {
 
         return (
             <Booking 
-                date={bookings.date}
+                date={booking.date}
                 course={booking.course.name}
                 customer={booking.customer.name}
                 key={booking.id} />

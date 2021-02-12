@@ -1,8 +1,8 @@
 const Course = ({course}) => {
 
     return (
-        <div id="list">
-            <h2>{course.name}</h2>
+        <div id="info">
+            <h3>{course.name}</h3>
             <p>location: {course.town}</p>
             <p>Star Rating: {course.rating}</p>
         </div>
