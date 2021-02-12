@@ -1,6 +1,7 @@
-import CourseDisplay from "../components/CourseDisplay"
+import CourseDisplay from "../components/Course/CourseDisplay"
+import BookingDisplay from "../components/Bookings/BookingDisplay"
 
-const AppContainer = ({courses}) => {
+const AppContainer = ({bookings, courses}) => {
 
     return(
         <div>
@@ -8,6 +9,9 @@ const AppContainer = ({courses}) => {
             <div className="app-list">
                 <div className="courses">
                     <CourseDisplay courses={courses}/>
+                </div>
+                <div className="bookings">
+                    <BookingDisplay bookings={bookings}/>
                 </div>
             </div>
         </div>

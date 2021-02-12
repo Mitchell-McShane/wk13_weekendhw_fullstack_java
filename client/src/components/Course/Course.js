@@ -4,7 +4,7 @@ const Course = ({course}) => {
         <div id="list">
             <h2>{course.name}</h2>
             <p>location: {course.town}</p>
-            <p>Star Rating: {course.starRating}</p>
+            <p>Star Rating: {course.rating}</p>
         </div>
     )
 }
