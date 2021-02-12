@@ -7,6 +7,7 @@ function App() {
 
   const [courses, setCourses] = useState([]);
   const [bookings, setBookings] = useState([]);
+  const [customer, setCustomers] = useState([]);
 
   const fetchCourses = () => {
     console.log("fetching courses..")
@@ -26,6 +27,15 @@ function App() {
     .then(data => setBookings(data))
   }
 
+  const fetchCustomers = () => {
+    console.log("fetching customers..")
+    const customersUrl = 'http://localhost:8080/customers'
+
+    fetch(customersUrl)
+    .then(res => res.json())
+    .then(data => setCustomers(data))
+  }
+
   useEffect(() => {
     fetchCourses()
   }, [])
@@ -34,11 +44,15 @@ function App() {
     fetchBookings()
   }, [])
 
+  useEffect(() => {
+    fetchCustomers()
+  }, [])
+
   
   return (
     <div className="App">
       <p>Front-end</p>
-      <AppContainer courses={courses} bookings={bookings}/>
+      <AppContainer courses={courses} bookings={bookings} customers={customer}/>
     </div>
   );
 }

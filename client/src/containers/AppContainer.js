@@ -1,7 +1,9 @@
 import CourseDisplay from "../components/Course/CourseDisplay"
 import BookingDisplay from "../components/Bookings/BookingDisplay"
+import CustomerDisplay from "../components/Customers/CustomerDisplay"
 
-const AppContainer = ({bookings, courses}) => {
+
+const AppContainer = ({bookings, courses, customers}) => {
 
     return(
         <div>
@@ -12,6 +14,9 @@ const AppContainer = ({bookings, courses}) => {
                 </div>
                 <div className="bookings">
                     <BookingDisplay bookings={bookings}/>
+                </div>
+                <div className="customers">
+                    <CustomerDisplay customers={customers}/>
                 </div>
             </div>
         </div>
